@@ -26,7 +26,10 @@
 
 <style>
 	.container {
-		display: flex;
-		width: 50%;
+		width: 90%;
+		align-items: baseline;
+		align-content: stretch;
+		flex-wrap: wrap;
+		flex-direction: row;
 	}
 </style>

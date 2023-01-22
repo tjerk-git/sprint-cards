@@ -17,9 +17,7 @@
 		font-weight: bold;
 		max-height: 100px;
 		text-align: center;
-		display: flex;
+		display: inline-block;
 		min-width: 150px;
-		align-items: center;
-		justify-content: center;
 	}
 </style>

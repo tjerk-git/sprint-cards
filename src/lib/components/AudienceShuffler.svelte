@@ -121,11 +121,14 @@
 	.shuffler {
 		background: #a091ff;
 		border-radius: 65px;
-		display: inline-block;
 		font-size: 2.4rem;
 		text-transform: uppercase;
 		padding: 1.4rem;
 		font-weight: bold;
+		display: flex;
+		min-width: 150px;
+		align-items: center;
+		justify-content: center;
 	}
 
 	svg {
