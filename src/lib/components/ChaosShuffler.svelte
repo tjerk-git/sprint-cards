@@ -1,0 +1,142 @@
+<script lang="ts">
+	import Typewriter from 'svelte-typewriter';
+	import { tokens } from '../../stores.js';
+
+	function decrementToken() {
+		tokens.update((n) => n - 1);
+	}
+
+	/**
+	 * @type {number}
+	 */
+	let countValue: number;
+
+	tokens.subscribe((value) => {
+		countValue = value;
+	});
+
+	const items = [
+		{
+			id: 1,
+			title: 'In black & white'
+		},
+		{
+			id: 2,
+			title: 'Using nothing but typography & lines'
+		},
+		{
+			id: 3,
+			title: 'Incorporating physical materials'
+		},
+		{
+			id: 4,
+			title: 'Without using rectangles'
+		},
+		{
+			id: 5,
+			title: 'Without using a professional design tool'
+		},
+		{
+			id: 6,
+			title: 'Without using words'
+		},
+		{
+			id: 7,
+			title: 'Designed for use in a pitch black environment'
+		},
+		{
+			id: 8,
+			title: 'Only using blue'
+		},
+		{
+			id: 9,
+			title: 'Incorporating some kind of animal in the design'
+		},
+		{
+			id: 10,
+			title: 'Using the Swiss Style of design'
+		},
+		{
+			id: 11,
+			title: 'In the style of De Stijl'
+		},
+		{
+			id: 12,
+			title: "That doesn't use clicking as an interaction"
+		},
+		{
+			id: 13,
+			title: 'With extreme minimalism'
+		},
+		{
+			id: 14,
+			title: 'More cowbell'
+		},
+		{
+			id: 15,
+			title: 'Using Skeumorphism '
+		},
+		{
+			id: 16,
+			title: 'Using some form of 3D'
+		},
+		{
+			id: 17,
+			title: 'With an extreme happy vibe'
+		}
+	];
+
+	let selectedItem = Math.floor(Math.random() * items.length);
+
+	const spin = () => {
+		if (countValue !== 0) {
+			selectedItem = Math.floor(Math.random() * items.length);
+			decrementToken();
+		}
+	};
+</script>
+
+<div class="shuffler">
+	<Typewriter mode="scramble" cursor:false wordInterval: 1>
+		{items[selectedItem].title}
+	</Typewriter>
+
+	<svg
+		on:click={spin}
+		width="55px"
+		height="55px"
+		viewBox="0 0 55 55"
+		version="1.1"
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+	>
+		<g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+			<g id="Card" transform="translate(-814.000000, -487.000000)" fill="#000000">
+				<g id="Group-2" transform="translate(-14.414062, -74.429688)">
+					<g id="icons_Q2" transform="translate(828.914062, 562.179688)">
+						<path
+							d="M27,0 C41.9116882,0 54,12.0883118 54,27 C54,41.9116882 41.9116882,54 27,54 C12.0883118,54 0,41.9116882 0,27 C0,12.0883118 12.0883118,0 27,0 Z M37.5148769,13.0682418 C36.9696094,12.9854795 36.4155052,13.1463486 35.9993306,13.5082396 C35.5843133,13.8691242 35.3482183,14.3936023 35.3531018,14.9434061 L35.3531018,16.103714 C33.7021072,14.7492632 31.7750394,13.8279573 29.7435692,13.3778342 C27.173397,12.8083483 24.4361105,12.9930737 21.8793675,14.0090426 C19.3226375,15.0250063 17.2051527,16.769412 15.726846,18.947624 C14.2485262,21.1258555 13.409396,23.7379014 13.409396,26.4891169 C13.4225521,29.6038181 14.5037775,32.5071017 16.3394032,34.8087244 C18.1750288,37.1103471 20.7650547,38.8103089 23.7958049,39.5153036 C26.8265552,40.2202982 29.900953,39.8379601 32.563941,38.5827775 C35.2189648,37.3313488 37.465036,35.2122888 38.851168,32.438167 C39.0821584,32.0346157 39.1484605,31.5771683 39.0659917,31.1483308 C38.982063,30.7119015 38.7440495,30.305104 38.3687667,30.0153792 C37.9186421,29.673281 37.3450987,29.5508528 36.7998866,29.678069 C36.2546745,29.8052851 35.7945422,30.1689044 35.5379791,30.6838847 C34.7445698,32.3643201 33.4998977,33.7384432 31.9890053,34.6897458 C30.4781129,35.6410485 28.7010001,36.1695306 26.8427096,36.158684 C24.6156194,36.1606968 22.5358099,35.4051938 20.8774177,34.1100703 C19.2190255,32.8149467 17.9820507,30.9802026 17.4455212,28.8237452 C16.9089917,26.6672877 17.1419981,24.4668104 18.0001537,22.5455664 C18.8583094,20.6243224 20.3416143,18.9823118 22.3056822,17.9427878 C24.26975,16.9032639 26.4616619,16.6000891 28.5329237,16.9708777 C30.0442095,17.2414217 31.4912634,17.8707716 32.7387129,18.8346934 L31.5218177,18.8346934 C31.0540635,18.8279024 30.6172627,18.9887784 30.2747121,19.2660813 C29.9303601,19.5448425 29.6812522,19.9412582 29.5866501,20.4324464 C29.5038879,20.977714 29.664757,21.5318182 30.0266479,21.9479927 C30.3875326,22.3630101 30.9120107,22.599105 31.4618145,22.5942216 L37.2328659,22.5942216 C37.7519189,22.5942216 38.2219198,22.3838335 38.5621447,22.0436691 C38.9023881,21.7034862 39.1130341,21.233534 39.1130341,20.7144575 L39.1130341,15.0032978 C39.1194971,14.5355484 38.9585449,14.0987511 38.6811978,13.7562174 C38.4024099,13.4119043 38.0060218,13.1628354 37.5148769,13.0682418 Z"
+							id="Combined-Shape"
+						/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>
+</div>
+
+<style>
+	.shuffler {
+		background: #e2c15b;
+		border-radius: 65px;
+		display: inline-block;
+		font-size: 2.4rem;
+		text-transform: uppercase;
+		padding: 1.4rem;
+		font-weight: bold;
+	}
+	svg {
+		display: inline-block;
+		cursor: pointer;
+	}
+</style>
