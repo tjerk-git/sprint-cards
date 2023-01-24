@@ -10,6 +10,8 @@
 	 * @type {number}
 	 */
 	let countValue: number;
+	export let selected: number;
+	let selectedItem: number;
 
 	tokens.subscribe((value) => {
 		countValue = value;
@@ -86,7 +88,11 @@
 		}
 	];
 
-	let selectedItem = Math.floor(Math.random() * items.length);
+	if (selected) {
+		selectedItem = selected;
+	} else {
+		selectedItem = Math.floor(Math.random() * items.length);
+	}
 
 	const spin = () => {
 		if (countValue !== 0) {

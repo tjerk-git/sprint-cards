@@ -2,6 +2,9 @@
 	import Typewriter from 'svelte-typewriter';
 	import { tokens } from '../../stores.js';
 
+	// prop
+	export let selected: number;
+
 	function decrementToken() {
 		tokens.update((n) => n - 1);
 	}
@@ -10,6 +13,7 @@
 	 * @type {number}
 	 */
 	let countValue: number;
+	let selectedItem: number;
 
 	tokens.subscribe((value) => {
 		countValue = value;
@@ -78,7 +82,11 @@
 		}
 	];
 
-	let selectedItem = Math.floor(Math.random() * items.length);
+	if (selected) {
+		selectedItem = selected;
+	} else {
+		selectedItem = Math.floor(Math.random() * items.length);
+	}
 
 	const spin = () => {
 		if (countValue !== 0) {
