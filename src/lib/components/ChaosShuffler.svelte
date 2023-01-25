@@ -103,7 +103,8 @@
 	};
 </script>
 
-<div class="shuffler">
+<div class="filler_container" />
+<div class="shuffler yellow">
 	<Typewriter mode="scramble" cursor:false wordInterval: 1>
 		{items[selectedItem].title}
 	</Typewriter>
@@ -112,13 +113,10 @@
 </div>
 
 <style>
-	.shuffler {
-		background: #e2c15b;
-		border-radius: 65px;
-		display: inline-block;
-		font-size: 2.4rem;
-		text-transform: uppercase;
-		padding: 1.4rem;
-		font-weight: bold;
+	.yellow {
+		background: var(--yellow-color);
+	}
+	.filler_container {
+		width: 100%;
 	}
 </style>

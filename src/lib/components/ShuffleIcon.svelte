@@ -33,5 +33,7 @@
 	svg {
 		display: inline-block;
 		cursor: pointer;
+		margin-left: 32px;
+		display: flex;
 	}
 </style>

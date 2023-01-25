@@ -67,7 +67,7 @@
 		},
 		{
 			id: 12,
-			title: 'Rich people on the toilet'
+			title: 'Really rich people'
 		},
 		{
 			id: 13,
@@ -97,7 +97,7 @@
 	};
 </script>
 
-<div class="shuffler">
+<div class="shuffler purple">
 	<Typewriter mode="scramble" cursor:false wordInterval: 1>
 		{items[selectedItem].title}
 	</Typewriter>
@@ -106,16 +106,7 @@
 </div>
 
 <style>
-	.shuffler {
-		background: #a091ff;
-		border-radius: 65px;
-		font-size: 2.4rem;
-		text-transform: uppercase;
-		padding: 1.4rem;
-		font-weight: bold;
-		display: flex;
-		min-width: 150px;
-		align-items: center;
-		justify-content: center;
+	.purple {
+		background: var(--purple-color);
 	}
 </style>

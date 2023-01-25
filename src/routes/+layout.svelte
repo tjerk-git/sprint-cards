@@ -5,4 +5,12 @@
 
 <Header />
 
-<slot />
+<main>
+	<slot />
+</main>
+
+<style>
+	main {
+		padding: 4rem;
+	}
+</style>

@@ -96,28 +96,20 @@
 	};
 </script>
 
-<div class="shuffler">
+<div class="shuffler green">
 	<Typewriter mode="scramble" cursor:0 wordInterval: 1>
 		{items[selectedItem].title}
 	</Typewriter>
 
 	<ShuffleIcon {spin} />
 </div>
+<div class="filler_container" />
 
 <style>
-	.shuffler {
+	.green {
 		background: var(--green-color);
-		border-radius: 65px;
-		font-size: 2.1rem;
-		text-transform: uppercase;
-		padding: 10px;
-		font-weight: bold;
-		max-height: 130px;
-		min-width: 80%;
-		text-align: center;
-		margin: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	}
+	.filler_container {
+		width: 100%;
 	}
 </style>
