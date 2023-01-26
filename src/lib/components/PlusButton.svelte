@@ -1,9 +1,15 @@
 <script>
+	/**
+	 * @type {any}
+	 */
 	export let chaos;
 	/**
 	 * @type {string}
 	 */
 	export let title;
+	/**
+	 * @type {String | Number | null | undefined}
+	 */
 	export let opacity;
 </script>
 
@@ -43,7 +49,6 @@
 		font-size: 4em;
 		text-transform: uppercase;
 		padding: 32px 48px;
-		font-weight: bold;
 		display: flex;
 		max-width: 550px;
 		align-items: center;

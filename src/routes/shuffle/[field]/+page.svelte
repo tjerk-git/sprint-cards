@@ -5,17 +5,15 @@
 	import Button from '$lib/components/Button.svelte';
 	import { fade } from 'svelte/transition';
 	import Modal from '$lib/components/Modal.svelte';
-	import { page } from '$app/stores';
 
+	/**
+	 * @type {{ json: { platforms: any; audiences: any; chaosModifiers: any; }; }}
+	 */
 	export let data;
-
-	console.log(data.json);
-	//import platformItems from '$lib/data/design/platform.json';
-	// import contexts from '$lib/data/contexts.json';
-	// import audiences from '$lib/data/audiences.json';
 
 	let showModal = false;
 	let chaos = false;
+	let filler = true;
 
 	const enableChaos = () => {
 		chaos = true;
@@ -33,12 +31,12 @@
 
 <div class="shuffle_container">
 	<Filler title="Design" />
-	<Shuffler items={data.json.platforms} color="green" />
+	<Shuffler items={data.json.platforms} color="green" {filler} />
 	<div class="filler">For</div>
 	<Shuffler items={data.json.audiences} color="purple" />
 	{#if chaos === true}
 		<div transition:fade>
-			<Shuffler items={data.json.audiences} color="yellow" />
+			<Shuffler items={data.json.chaosModifiers} color="yellow" />
 		</div>
 	{/if}
 </div>

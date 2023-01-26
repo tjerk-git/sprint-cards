@@ -16,7 +16,6 @@
 		font-size: 4em;
 		text-transform: uppercase;
 		padding: 32px 48px;
-		font-weight: bold;
 		display: flex;
 		max-width: 550px;
 		align-items: center;

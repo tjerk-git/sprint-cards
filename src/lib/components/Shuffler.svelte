@@ -19,6 +19,14 @@
 	let countValue: number;
 	let selectedItem: number;
 
+	let hideShuffler = false;
+
+	$: {
+		if (countValue === 0) {
+			hideShuffler = true;
+		}
+	}
+
 	tokens.subscribe((value) => {
 		countValue = value;
 	});
@@ -42,7 +50,7 @@
 		{items[selectedItem].title}
 	</Typewriter>
 
-	<ShuffleIcon {spin} />
+	<ShuffleIcon {spin} {hideShuffler} />
 </div>
 
 {#if filler}

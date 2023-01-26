@@ -7,6 +7,7 @@
 	const { audience } = $page.params;
 	const { platform } = $page.params;
 	const { chaos } = $page.params;
+
 	let showErrors = false;
 
 	/**
