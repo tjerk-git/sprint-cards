@@ -5,8 +5,12 @@
 	import Button from '$lib/components/Button.svelte';
 	import { fade } from 'svelte/transition';
 	import Modal from '$lib/components/Modal.svelte';
+	import { page } from '$app/stores';
 
-	import platformItems from './api/design/platform.json';
+	export let data;
+
+	console.log(data.json);
+	//import platformItems from '$lib/data/design/platform.json';
 	// import contexts from '$lib/data/contexts.json';
 	// import audiences from '$lib/data/audiences.json';
 
@@ -29,17 +33,14 @@
 
 <div class="shuffle_container">
 	<Filler title="Design" />
-	<!-- <Shuffler items={platformItems} color="green" />
+	<Shuffler items={data.json.platforms} color="green" />
 	<div class="filler">For</div>
-	<Shuffler items={audienceItems} color="green" /> -->
-
-	<!-- <div class="filler">For</div>
-	<AudienceShuffler items={audienceItems} />
+	<Shuffler items={data.json.audiences} color="purple" />
 	{#if chaos === true}
 		<div transition:fade>
-			<ChaosShuffler items={chaosItems} />
+			<Shuffler items={data.json.audiences} color="yellow" />
 		</div>
-	{/if} -->
+	{/if}
 </div>
 
 {#if showModal}

@@ -3,9 +3,10 @@
 	 * @type {string}
 	 */
 	export let title;
+	export let share;
 </script>
 
-<button class="go--button">
+<button class="go--button" on:click={share}>
 	{title}
 </button>
 

@@ -4,9 +4,10 @@
 	 * @type {string}
 	 */
 	export let title;
+	export let opacity;
 </script>
 
-<div class="plus--button" on:click={chaos}>
+<div class="plus--button" on:click={chaos} style:opacity>
 	<svg
 		width="44px"
 		height="44px"

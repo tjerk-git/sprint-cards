@@ -1,7 +1,7 @@
 <script>
 	import PlatformShuffler from '$lib/components/PlatformShuffler.svelte';
 	import ChaosShuffler from '$lib/components/ChaosShuffler.svelte';
-	import AudienceShuffler from '$lib/components/AudienceShuffler.svelte';
+	import AudienceShuffler from '$lib/components/Shuffler.svelte';
 	import Filler from '$lib/components/Filler.svelte';
 </script>
 

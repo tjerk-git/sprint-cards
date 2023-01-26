@@ -1,8 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import PlatformShuffler from '$lib/components/PlatformShuffler.svelte';
-	import ChaosShuffler from '$lib/components/ChaosShuffler.svelte';
-	import AudienceShuffler from '$lib/components/AudienceShuffler.svelte';
+
 	import Filler from '$lib/components/Filler.svelte';
 	import Error from '$lib/components/Error.svelte';
 

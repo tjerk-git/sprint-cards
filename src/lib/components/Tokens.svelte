@@ -1,4 +1,5 @@
 <script>
+	import { fade } from 'svelte/transition';
 	/**
 	 * @type {Number}
 	 */
@@ -6,7 +7,9 @@
 </script>
 
 <div class="circle">
-	{tokens}
+	{#key tokens}
+		<div transition:fade>{tokens}</div>
+	{/key}
 </div>
 
 <style>

@@ -8,6 +8,7 @@
 	}
 	// prop
 	export let selected: number;
+	export let color: string;
 
 	/**
 	 * @type {number}
@@ -96,19 +97,15 @@
 	};
 </script>
 
-<div class="shuffler green">
+<div class="shuffler {color}">
 	<Typewriter mode="scramble" cursor:0 wordInterval: 1>
 		{items[selectedItem].title}
 	</Typewriter>
 
 	<ShuffleIcon {spin} />
 </div>
-<div class="filler_container" />
 
 <style>
-	.green {
-		background: var(--green-color);
-	}
 	.filler_container {
 		width: 100%;
 	}
