@@ -1,16 +1,32 @@
 <script lang="ts">
 	import Typewriter from 'svelte-typewriter';
 	import ShuffleIcon from './ShuffleIcon.svelte';
-	import { tokens } from '../../stores.js';
+	import { tokens, currentAudience, currentChaos, currentPlatform } from '../../stores.js';
+	import { onMount } from 'svelte';
 
 	// prop
-	export let selected: number = 99;
 	export let color: string;
 	export let items: any;
 	export let filler: boolean = false;
 
+	onMount(() => {
+		updateTitles();
+	});
+
 	function decrementToken() {
 		tokens.update((n) => n - 1);
+	}
+
+	function updateTitles() {
+		if (color === 'green') {
+			currentPlatform.update(() => items[selectedItem].title);
+		}
+		if (color === 'purple') {
+			currentAudience.update(() => items[selectedItem].title);
+		}
+		if (color === 'yellow') {
+			currentChaos.update(() => items[selectedItem].title);
+		}
 	}
 
 	/**
@@ -31,18 +47,19 @@
 		countValue = value;
 	});
 
-	if (selected !== 99) {
-		selectedItem = selected;
-	} else {
-		selectedItem = Math.floor(Math.random() * items.length);
-	}
+	selectedItem = Math.floor(Math.random() * items.length);
 
 	const spin = () => {
 		if (countValue !== 0) {
 			selectedItem = Math.floor(Math.random() * items.length);
 			decrementToken();
+			updateTitles();
 		}
 	};
+
+	// onMount(() => {
+	// 	updateTitles();
+	// });
 </script>
 
 <div class="shuffler {color}">

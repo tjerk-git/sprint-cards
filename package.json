@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"slugify": "^1.6.5",
 		"svelte-typewriter": "^3.1.4"
 	}
 }

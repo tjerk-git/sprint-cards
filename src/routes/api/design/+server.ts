@@ -6,195 +6,242 @@ export const GET = async () => {
         "audiences": [
             {
                 "id": 1,
-                "title": 'Cats'
+                "title": 'Cats',
+                "slug": 'Cats',
             },
             {
                 "id": 2,
-                "title": 'Someone with one arm available'
+                "title": 'Someone with one arm available',
+                "slug": 'Someone-with-one-arm-available',
             },
             {
                 "id": 3,
-                "title": 'The oldest person you know'
+                "title": 'The oldest person you know',
+                "slug": 'The-oldest-person-you-know',
             },
             {
                 "id": 4,
-                "title": 'Someone who lost their glasses'
+                "title": 'Someone who lost their glasses',
+                "slug": 'Someone-who-lost-their-glasses',
             },
             {
                 "id": 5,
-                "title": 'Someone from 1985'
+                "title": 'Someone from 1985',
+                "slug": 'Someone-from-1985',
             },
             {
                 "id": 6,
-                "title": 'The youngest (non-baby) person you know'
+                "title": 'The youngest (non-baby) person you know',
+                "slug": 'The-yougest-non-baby-person-you-know',
             },
             {
                 "id": 7,
-                "title": 'People with low literacy'
+                "title": 'People with low literacy',
+                "slug": 'People-with-low-literacy',
             },
             {
                 "id": 8,
-                "title": 'Very busy people'
+                "title": 'Very busy people',
+                "slug": 'Very-busy-people',
             },
             {
                 "id": 9,
-                "title": "People who can't make choices"
+                "title": "People who can't make choices",
+                "slug": 'People-who-cant-make-choices',
             },
             {
                 "id": 10,
-                "title": 'Bob (you pick the Bob)'
+                "title": 'Bob (you pick the Bob)',
+                "slug": 'Bob-you-pick-the-bob',
             },
             {
                 "id": 11,
-                "title": 'Yourself'
+                "title": 'Yourself',
+                "slug": 'Yourself',
             },
             {
                 "id": 12,
-                "title": 'Really rich people'
+                "title": 'Really rich people',
+                "slug": 'Really-rich-people',
             },
             {
                 "id": 13,
-                "title": 'For your best friend'
+                "title": 'For your best friend',
+                "slug": 'For-your-best-friend'
             },
             {
                 "id": 14,
-                "title": 'Families'
+                "title": 'Families',
+                "slug": 'Families'
             },
             {
                 "id": 15,
-                "title": 'For people with low digital skills'
+                "title": 'For people with low digital skills',
+                "slug": 'For-people-with-low-digital-skills'
             }
         ],
         "platforms": [
             {
                 "id": 1,
-                "title": 'A smartwatch app'
+                "title": 'A smartwatch app',
+                "slug": "A-smartwatch-app",
             },
             {
                 "id": 2,
-                "title": 'A mobile banking app'
+                "title": 'A mobile banking app',
+                "slug": "A-mobile-banking-app",
             },
             {
                 "id": 3,
-                "title": 'An online shopping platform'
+                "title": 'An online shopping platform',
+                "slug": "An-online-shopping-platform",
             },
             {
                 "id": 4,
-                "title": 'A music streaming service'
+                "title": 'A music streaming service',
+                "slug": "A-music-streaming-service",
             },
             {
                 "id": 5,
-                "title": 'A movie streaming service'
+                "title": 'A movie streaming service',
+                "slug": "A-movie-streaming-service",
             },
             {
                 "id": 6,
-                "title": 'A photo app'
+                "title": 'A photo app',
+                "slug": "A-photo-app",
             },
             {
                 "id": 7,
-                "title": 'A todo app'
+                "title": 'A todo app',
+                "slug": "A-todo-app",
             },
             {
                 "id": 8,
-                "title": 'A digital music instrument'
+                "title": 'A digital music instrument',
+                "slug": "A-digital-music-instrument",
             },
             {
                 "id": 9,
-                "title": 'A map app'
+                "title": 'A map app',
+                "slug": "A-map-app",
             },
             {
                 "id": 10,
-                "title": 'A job marketplace'
+                "title": 'A job marketplace',
+                "slug": "A-job-marketplace",
             },
             {
                 "id": 11,
-                "title": 'A messaging app'
+                "title": 'A messaging app',
+                "slug": "A-messaging-app",
             },
             {
                 "id": 12,
-                "title": 'A weather app'
+                "title": 'A weather app',
+                "slug": "A-weather-app",
             },
             {
                 "id": 13,
-                "title": 'A language learning app'
+                "title": 'A language learning app',
+                "slug": "A-language-learning-app",
             },
             {
                 "id": 14,
-                "title": 'A photo sharing app'
+                "title": 'A photo sharing app',
+                "slug": "A-photo-sharing-app",
             },
             {
                 "id": 15,
-                "title": 'An ebook reader interface'
+                "title": 'An ebook reader interface',
+                "slug": "An-ebook-reader-interface",
             }
         ],
         "chaosModifiers": [
             {
                 "id": 1,
-                "title": 'In black & white'
+                "title": 'In black & white',
+                "slug": "In-black-and-white",
             },
             {
                 "id": 2,
-                "title": 'Using nothing but typography & lines'
+                "title": 'Using nothing but typography & lines',
+                "slug": "Using-nothing-but-typography-and-lines",
             },
             {
                 "id": 3,
-                "title": 'Incorporating physical materials'
+                "title": 'Incorporating physical materials',
+                "slug": "Incorporating-physical-materials",
             },
             {
                 "id": 4,
-                "title": 'Without using rectangles'
+                "title": 'Without using rectangles',
+                "slug": "Without-using-rectangles",
             },
             {
                 "id": 5,
-                "title": 'Without using a professional design tool'
+                "title": 'Without using a professional design tool',
+                "slug": "Without-using-a-professional-design-tool",
             },
             {
                 "id": 6,
-                "title": 'Without using words'
+                "title": 'Without using words',
+                "slug": "Without-using-words",
             },
             {
                 "id": 7,
-                "title": 'Designed for use in a pitch black environment'
+                "title": 'Designed for use in a pitch black environment',
+                "slug": "Designed-for-use-in-a-pitch-black-environment",
             },
             {
                 "id": 8,
-                "title": 'Only using blue'
+                "title": 'Only using blue',
+                "slug": "Only-using-blue",
             },
             {
                 "id": 9,
-                "title": 'Incorporating some kind of animal in the design'
+                "title": 'Incorporating some kind of animal in the design',
+                "slug": "Incorporating-some-kind-of-animal-in-the-design",
             },
             {
                 "id": 10,
-                "title": 'Using the Swiss Style of design'
+                "title": 'Using the Swiss Style of design',
+                "slug": "Using-the-Swiss-Style-of-design",
             },
             {
                 "id": 11,
-                "title": 'In the style of De Stijl'
+                "title": 'In the style of De Stijl',
+                "slug": "In-the-style-of-De-Stijl",
             },
             {
                 "id": 12,
-                "title": "That doesn't use clicking as an interaction"
+                "title": "That doesn't use clicking as an interaction",
+                "slug": "That-doesn't-use-clicking-as-an-interaction",
             },
             {
                 "id": 13,
-                "title": 'With extreme minimalism'
+                "title": 'With extreme minimalism',
+                "slug": "With-extreme-minimalism",
             },
             {
                 "id": 14,
-                "title": 'More cowbell'
+                "title": 'More cowbell',
+                "slug": "More-cowbell",
             },
             {
                 "id": 15,
-                "title": 'Using Skeumorphism'
+                "title": 'Using Skeumorphism',
+                "slug": "Using-Skeumorphism",
             },
             {
                 "id": 16,
-                "title": 'Using some form of 3D'
+                "title": 'Using some form of 3D',
+                "slug": "Using-some-form-of-3D",
             },
             {
                 "id": 17,
-                "title": 'With an extreme happy vibe'
+                "title": 'With an extreme happy vibe',
+                "slug": "With-an-extreme-happy-vibe",
             }
         ],
     };
