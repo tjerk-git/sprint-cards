@@ -3,10 +3,17 @@
 	 * @type {string}
 	 */
 	export let title;
+	/**
+	 * @type {boolean}
+	 */
+	export let filler;
 </script>
 
 <div class="filler">{title}</div>
-<div class="filler_container" />
+
+{#if filler}
+	<div class="filler_container" />
+{/if}
 
 <style>
 	.filler_container {

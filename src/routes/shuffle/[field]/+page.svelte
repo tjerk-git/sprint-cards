@@ -56,7 +56,7 @@
 </script>
 
 <div class="shuffle_container">
-	<Filler title="Design" />
+	<Filler title="Design" {filler} />
 	<Shuffler items={data.json.platforms} color="green" {filler} />
 	<Filler title="For" />
 	<Shuffler items={data.json.audiences} color="purple" />
@@ -109,10 +109,18 @@
 	}
 
 	footer {
-		position: absolute;
-		bottom: 35px;
+		padding-top: 35px;
 		display: flex;
 		width: 90%;
 		justify-content: space-between;
+	}
+
+	h2 {
+		font-size: 2.6em;
+		font-weight: normal;
+	}
+
+	.button_container {
+		margin-top: 70px;
 	}
 </style>

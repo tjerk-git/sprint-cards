@@ -32,7 +32,7 @@ export const GET = async () => {
             {
                 "id": 6,
                 "title": 'The youngest (non-baby) person you know',
-                "slug": 'The-yougest-non-baby-person-you-know',
+                "slug": 'The-youngest-(non-baby)-person-you-know',
             },
             {
                 "id": 7,
@@ -52,7 +52,7 @@ export const GET = async () => {
             {
                 "id": 10,
                 "title": 'Bob (you pick the Bob)',
-                "slug": 'Bob-you-pick-the-bob',
+                "slug": 'Bob-(you-pick-the-Bob)',
             },
             {
                 "id": 11,

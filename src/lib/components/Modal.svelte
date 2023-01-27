@@ -42,15 +42,17 @@
 <div class="modal-background" on:click={close} />
 
 <div class="modal" role="dialog" aria-modal="true" bind:this={modal}>
-	<slot name="header" />
-	<slot />
+	<!-- svelte-ignore a11y-autofocus -->
+
+	<div class="modal--header">
+		<slot name="header" />
+		<slot />
+		<button autofocus on:click={close}>close</button>
+	</div>
 
 	<slot name="content" />
 
 	<slot />
-
-	<!-- svelte-ignore a11y-autofocus -->
-	<button autofocus on:click={close}>close</button>
 </div>
 
 <style>
@@ -64,18 +66,28 @@
 	}
 
 	.modal {
-		position: absolute;
-		width: calc(100vw - 4em);
-		max-height: calc(100vh - 4em);
-		top: 70px;
+		width: 70%;
 		overflow: auto;
-		padding: 1.2em;
+		padding: 70px;
 		border-radius: 0.2em;
 		background: white;
 		border-radius: 65px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.modal--header {
+		display: flex;
+		align-content: center;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 70px;
 	}
 
 	button {
 		display: block;
+		cursor: pointer;
 	}
 </style>

@@ -165,7 +165,7 @@ body {
 
 .shuffler {
     border-radius: 65px;
-    font-size: 4em;
+    font-size: 3.6em;
     text-transform: uppercase;
     padding: 32px 48px;
     display: flex;
@@ -177,13 +177,22 @@ body {
 .filler {
     background: #c2c0b7;
     border-radius: 65px;
-    font-size: 4em;
+    font-size: 3.6em;
     text-transform: uppercase;
     padding: 32px 48px;
     display: flex;
     min-width: 180px;
     align-items: center;
     justify-content: center;
+}
+
+.share_container {
+    min-width: 45%;
+    align-items: baseline;
+    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
 }
 
 @media only screen and (max-width: 600px) {}
