@@ -1,6 +1,6 @@
 <script>
 	import Tokens from './Tokens.svelte';
-	import { tokens } from '../../stores.js';
+	import { tokens } from '$lib/shared/stores.js';
 	import { page } from '$app/stores';
 
 	/**

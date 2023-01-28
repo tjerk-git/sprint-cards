@@ -1,5 +1,5 @@
 <script>
-	import { currentPlatform, currentAudience, currentChaos } from './../../../stores.js';
+	import { currentPlatform, currentAudience, currentChaos } from '$lib/shared/stores.js';
 	import Shuffler from '$lib/components/Shuffler.svelte';
 	import Filler from '$lib/components/Filler.svelte';
 	import PlusButton from '$lib/components/PlusButton.svelte';
@@ -10,6 +10,8 @@
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
 	import { page } from '$app/stores';
 	import slugify from 'slugify';
+
+	import challenges from '$lib/shared/challenges';
 
 	/**
 	 * @type {{ json: { platforms: any; audiences: any; chaosModifiers: any; }; }}
@@ -51,6 +53,8 @@
 
 		let link = `${$page.url.origin}/share/${$page.params.field}/${audienceSlug}+${platformSlug}+${chaosSlug}`;
 
+		challenges.set([{ title: 'cool', url: 'yeah' }]);
+
 		copyToClipboard(link);
 	};
 </script>
@@ -68,24 +72,26 @@
 </div>
 
 {#if showModal}
-	<Modal on:close={() => (showModal = false)}>
-		<h2 slot="header">Well well it looks like iam going to...</h2>
-		<div slot="content">
-			<div class="share_container">
-				<Filler title="Design" />
-				<Static title={$currentPlatform} color="green" {filler} />
-				<Filler title="For" />
-				<Static title={$currentAudience} color="purple" />
-				{#if chaos}
-					<Static title={$currentChaos} color="yellow" />
-				{/if}
-			</div>
+	<div transition:fade>
+		<Modal on:close={() => (showModal = false)}>
+			<h2 slot="header">Well well it looks like iam going to...</h2>
+			<div slot="content">
+				<div class="share_container">
+					<Filler title="Design" />
+					<Static title={$currentPlatform} color="green" {filler} />
+					<Filler title="For" />
+					<Static title={$currentAudience} color="purple" />
+					{#if chaos}
+						<Static title={$currentChaos} color="yellow" />
+					{/if}
+				</div>
 
-			<div class="button_container">
-				<CopyLinkButton title="Copy link" {copyLink} />
+				<div class="button_container">
+					<CopyLinkButton title="Copy link" {copyLink} />
+				</div>
 			</div>
-		</div>
-	</Modal>
+		</Modal>
+	</div>
 {/if}
 
 <footer>

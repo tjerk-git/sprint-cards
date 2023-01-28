@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Typewriter from 'svelte-typewriter';
 	import ShuffleIcon from './ShuffleIcon.svelte';
-	import { tokens, currentAudience, currentChaos, currentPlatform } from '../../stores.js';
+	import { tokens, currentAudience, currentChaos, currentPlatform } from '$lib/shared/stores.js';
 	import { onMount } from 'svelte';
 
 	// prop
