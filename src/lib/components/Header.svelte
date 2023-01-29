@@ -2,6 +2,7 @@
 	import Tokens from './Tokens.svelte';
 	import { tokens } from '$lib/shared/stores.js';
 	import { page } from '$app/stores';
+	import Mute from './Mute.svelte';
 
 	/**
 	 * @type {number}
@@ -137,6 +138,8 @@
 	<div class="token-counter">
 		<Tokens tokens={countValue} />
 	</div>
+
+	<Mute />
 </header>
 
 <style>
