@@ -66,7 +66,7 @@
 	}
 
 	.modal {
-		width: 99%;
+		width: 85%;
 		overflow: auto;
 		padding: 32px;
 		border-radius: 0.2em;
@@ -89,5 +89,11 @@
 	button {
 		display: block;
 		cursor: pointer;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.modal {
+			width: 100%;
+		}
 	}
 </style>
