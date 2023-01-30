@@ -10,6 +10,7 @@
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
 	import { page } from '$app/stores';
 	import slugify from 'slugify';
+	import { beforeUpdate } from 'svelte';
 
 	import challenges from '$lib/shared/challenges';
 
@@ -21,10 +22,17 @@
 	let showModal = false;
 	let chaos = false;
 	let filler = true;
+	let context = $page.params.field;
+	let paused = false;
 
 	const enableChaos = () => {
 		chaos = true;
+		paused = true;
 	};
+
+	beforeUpdate(() => {
+		context = $page.params.field;
+	});
 
 	const share = () => {
 		showModal = true;
@@ -53,16 +61,20 @@
 
 		let link = `${$page.url.origin}/share/${$page.params.field}/${audienceSlug}+${platformSlug}+${chaosSlug}`;
 
-		challenges.set([{ title: 'cool', url: 'yeah' }]);
-
 		copyToClipboard(link);
 	};
 </script>
 
 <div class="shuffle_container">
-	<Filler title="Design" {filler} />
+	{#if context === 'audio'}
+		<Filler title="Create a" {filler} />
+	{:else}
+		<Filler title="Design" {filler} />
+	{/if}
 	<Shuffler items={data.json.platforms} color="green" {filler} />
-	<Filler title="For" />
+	{#if context === 'design'}
+		<Filler title="For" />
+	{/if}
 	<Shuffler items={data.json.audiences} color="purple" />
 	{#if chaos === true}
 		<div transition:fade>

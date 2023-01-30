@@ -14,7 +14,7 @@
 	import Audio from './Audio.svelte';
 
 	let paused = true;
-	let mute = false;
+	let muted = false;
 	let src = 'bloep.mov';
 
 	// prop
@@ -61,14 +61,14 @@
 	});
 
 	isMuted.subscribe((value) => {
-		mute = value;
+		muted = value;
 	});
 
 	selectedItem = Math.floor(Math.random() * items.length);
 
 	const spin = () => {
 		// only play when not muted
-		if (!mute) {
+		if (!muted) {
 			paused = false;
 		}
 
@@ -92,7 +92,7 @@
 	<div class="filler_container" />
 {/if}
 
-<Audio {src} {paused} />
+<Audio {src} {paused} {muted} />
 
 <style>
 	.purple {

@@ -6,7 +6,7 @@
 	/**
 	 * @type {boolean}
 	 */
-	export let filler;
+	export let filler = false;
 </script>
 
 <div class="filler">{title}</div>
