@@ -66,7 +66,7 @@
 	}
 
 	.modal {
-		width: 85%;
+		width: 99%;
 		overflow: auto;
 		padding: 32px;
 		border-radius: 0.2em;
