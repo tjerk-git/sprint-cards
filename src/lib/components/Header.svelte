@@ -131,15 +131,21 @@
 				>
 			</li>
 
-			<li><a href="/about">About</a></li>
+			<li>
+				<a href="/about"
+					>About
+					{#if $page.url.pathname === '/about'}
+						&#8226;
+					{/if}</a
+				>
+			</li>
+			<li><Mute /></li>
 		</ul>
 	</nav>
 
 	<div class="token-counter">
 		<Tokens tokens={countValue} />
 	</div>
-
-	<Mute />
 </header>
 
 <style>
