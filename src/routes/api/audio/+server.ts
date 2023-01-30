@@ -119,8 +119,8 @@ export const GET = async () => {
             },
             {
                 "id": 2,
-                "title": 'Film Background music',
-                "slug": 'Film-Background-music',
+                "title": 'Soundtrack',
+                "slug": 'Soundtrack',
             },
             {
                 "id": 3,
@@ -149,8 +149,8 @@ export const GET = async () => {
             },
             {
                 "id": 8,
-                "title": 'Generic copyright free music',
-                "slug": 'Generic-copyright-free-music',
+                "title": 'Generic copyright free track',
+                "slug": 'Generic-copyright-free-track',
             },
             {
                 "id": 9,
@@ -164,18 +164,18 @@ export const GET = async () => {
             },
             {
                 "id": 11,
-                "title": 'Gym Background music',
-                "slug": 'Gym-Background-music',
+                "title": 'Workout track',
+                "slug": 'Workout-track',
             },
             {
                 "id": 12,
-                "title": 'Meditation music',
-                "slug": 'Meditation-music',
+                "title": 'Meditation track',
+                "slug": 'Meditation-track',
             },
             {
                 "id": 13,
-                "title": 'Sports final celebration music',
-                "slug": 'Sports-final-celebration-music',
+                "title": 'Sports final celebration track',
+                "slug": 'Sports-final-celebration-track',
             },
             {
                 "id": 14,
@@ -189,8 +189,8 @@ export const GET = async () => {
             },
             {
                 "id": 16,
-                "title": 'Mating ritual Music',
-                "slug": 'Mating-ritual-Music',
+                "title": 'Mating ritual track',
+                "slug": 'Mating-ritual-track',
             },
         ],
         "chaosModifiers": [

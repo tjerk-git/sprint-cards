@@ -165,25 +165,25 @@ body {
 
 .shuffler {
     border-radius: 65px;
-    font-size: 3.6em;
     text-transform: uppercase;
     padding: 32px 48px;
     display: flex;
     min-width: 150px;
     align-items: center;
     justify-content: center;
+    font-size: 3.2em;
 }
 
 .filler {
     background: #c2c0b7;
     border-radius: 65px;
-    font-size: 3.6em;
     text-transform: uppercase;
     padding: 32px 48px;
     display: flex;
     min-width: 180px;
     align-items: center;
     justify-content: center;
+    font-size: 3.2em;
 }
 
 .share_container {
@@ -195,4 +195,26 @@ body {
     display: flex;
 }
 
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+    .shuffler {
+        font-size: 1.4em;
+        padding: 16px 24px;
+    }
+
+    .filler {
+        font-size: 1.4em;
+        padding: 16px 24px;
+    }
+
+    svg {
+        height: 32px !important;
+    }
+
+    main {
+        padding: 1em !important;
+    }
+
+    header {
+        font-size: 10px !important;
+    }
+}

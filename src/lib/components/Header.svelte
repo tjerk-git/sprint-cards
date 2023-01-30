@@ -156,6 +156,7 @@
 		border-bottom: 1px solid var(--black-color);
 		display: flex;
 		align-items: center;
+		font-size: 1em;
 	}
 	.token-counter {
 		margin-left: auto;
@@ -183,5 +184,26 @@
 	nav ul li a {
 		text-decoration: none;
 		color: var(--black-color);
+	}
+
+	@media only screen and (max-width: 600px) {
+		nav ul li {
+			padding: 10px;
+			font-size: 1em;
+			margin-left: 35px;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+		}
+
+		.menu {
+			display: flex;
+			flex-wrap: nowrap;
+		}
+
+		header {
+			display: block;
+			padding: 10px;
+		}
 	}
 </style>

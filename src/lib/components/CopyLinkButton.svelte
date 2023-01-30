@@ -13,7 +13,7 @@
 <style>
 	.go--button {
 		border-radius: 65px;
-		font-size: 4em;
+		font-size: 3.2em;
 		text-transform: uppercase;
 		padding: 32px 48px;
 		display: flex;
@@ -23,5 +23,12 @@
 		background: var(--black-color);
 		color: var(--bg-color);
 		cursor: pointer;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.go--button {
+			font-size: 1em;
+			padding: 16px 24px;
+		}
 	}
 </style>

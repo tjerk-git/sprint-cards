@@ -45,5 +45,6 @@
 		cursor: pointer;
 		margin-left: 32px;
 		display: flex;
+		height: 55px;
 	}
 </style>

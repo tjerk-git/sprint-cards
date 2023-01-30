@@ -66,9 +66,9 @@
 	}
 
 	.modal {
-		width: 70%;
+		width: 85%;
 		overflow: auto;
-		padding: 70px;
+		padding: 32px;
 		border-radius: 0.2em;
 		background: white;
 		border-radius: 65px;
@@ -83,7 +83,7 @@
 		align-content: center;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 70px;
+		margin-bottom: 32px;
 	}
 
 	button {

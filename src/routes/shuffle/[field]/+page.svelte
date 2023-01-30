@@ -78,6 +78,9 @@
 	<Shuffler items={data.json.audiences} color="purple" />
 	{#if chaos === true}
 		<div transition:fade>
+			{#if context === 'audio'}
+				<Filler title="For" />
+			{/if}
 			<Shuffler items={data.json.chaosModifiers} color="yellow" />
 		</div>
 	{/if}
@@ -140,5 +143,11 @@
 
 	.button_container {
 		margin-top: 70px;
+	}
+
+	@media only screen and (max-width: 600px) {
+		h2 {
+			font-size: 1em;
+		}
 	}
 </style>

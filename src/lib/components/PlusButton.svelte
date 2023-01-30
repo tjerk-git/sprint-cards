@@ -46,7 +46,7 @@
 <style>
 	.plus--button {
 		border-radius: 65px;
-		font-size: 4em;
+		font-size: 3.2em;
 		text-transform: uppercase;
 		padding: 32px 48px;
 		display: flex;
@@ -58,5 +58,12 @@
 	}
 	svg {
 		margin-right: 32px;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.plus--button {
+			padding: 16px 24px;
+			font-size: 1em;
+		}
 	}
 </style>

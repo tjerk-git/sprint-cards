@@ -25,6 +25,13 @@
 		text-transform: uppercase;
 		font-weight: bold;
 		box-shadow: 5px 0 0 -2px #141414;
-		animation: scale-wiggle;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.circle {
+			width: 25px;
+			height: 25px;
+			font-size: 1em;
+		}
 	}
 </style>
