@@ -199,11 +199,13 @@ body {
     .shuffler {
         font-size: 1.4em;
         padding: 16px 24px;
+        width: 100%;
     }
 
     .filler {
         font-size: 1.4em;
         padding: 16px 24px;
+        width: 100%;
     }
 
     svg {
@@ -216,5 +218,9 @@ body {
 
     header {
         font-size: 10px !important;
+    }
+
+    .filler_container {
+        width: 0% !important;
     }
 }

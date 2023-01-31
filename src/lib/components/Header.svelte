@@ -113,6 +113,7 @@
 		</svg>
 	</a>
 	<nav>
+		<!-- @todo menu item component -->
 		<ul class="menu">
 			<li>
 				<a href="/shuffle/design"
@@ -126,6 +127,15 @@
 				<a href="/shuffle/audio"
 					>Audio
 					{#if $page.url.pathname === '/shuffle/audio'}
+						&#8226;
+					{/if}</a
+				>
+			</li>
+
+			<li>
+				<a href="/shuffle/motion"
+					>Motion
+					{#if $page.url.pathname === '/shuffle/motion'}
 						&#8226;
 					{/if}</a
 				>

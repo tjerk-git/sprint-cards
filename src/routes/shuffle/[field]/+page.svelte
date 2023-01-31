@@ -66,13 +66,9 @@
 </script>
 
 <div class="shuffle_container">
-	{#if context === 'audio'}
-		<Filler title="Create a" {filler} />
-	{:else}
-		<Filler title="Design" {filler} />
-	{/if}
+	<Filler title="Create a" {filler} />
 	<Shuffler items={data.json.platforms} color="green" {filler} />
-	{#if context === 'design'}
+	{#if context === 'design' || context === 'motion'}
 		<Filler title="For" />
 	{/if}
 	<Shuffler items={data.json.audiences} color="purple" />
