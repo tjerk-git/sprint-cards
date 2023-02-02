@@ -1,26 +1,17 @@
 <script lang="ts">
 	import Typewriter from 'svelte-typewriter';
 	import ShuffleIcon from './ShuffleIcon.svelte';
-
-	import {
-		tokens,
-		currentAudience,
-		currentChaos,
-		currentPlatform,
-		isMuted
-	} from '$lib/shared/stores.js';
-
 	import { onMount } from 'svelte';
 	import Audio from './Audio.svelte';
 
-	let paused = true;
-	let muted = false;
-	let src = 'bloep.mov';
+	import { tokens, currentAudience, currentChaos, currentPlatform } from '$lib/shared/stores.js';
 
 	// prop
 	export let color: string;
 	export let items: any;
 	export let filler: boolean = false;
+
+	let paused = true;
 
 	onMount(() => {
 		updateTitles();
@@ -60,22 +51,14 @@
 		countValue = value;
 	});
 
-	isMuted.subscribe((value) => {
-		muted = value;
-	});
-
 	selectedItem = Math.floor(Math.random() * items.length);
 
 	const spin = () => {
-		// only play when not muted
-		if (!muted) {
-			paused = false;
-		}
-
 		if (countValue !== 0) {
 			selectedItem = Math.floor(Math.random() * items.length);
 			decrementToken();
 			updateTitles();
+			paused = false;
 		}
 	};
 </script>
@@ -92,7 +75,7 @@
 	<div class="filler_container" />
 {/if}
 
-<Audio {src} {paused} {muted} />
+<Audio {paused} />
 
 <style>
 	.purple {

@@ -1,16 +1,17 @@
 <script>
-	/**
-	 * @type {string}
-	 */
-	export let src;
+	import { isMuted } from '$lib/shared/stores.js';
+
 	/**
 	 * @type {boolean}
 	 */
 	export let paused;
-	/**
-	 * @type {boolean}
-	 */
-	export let muted;
+
+	let muted = false;
+	let src = 'bloep.mov';
+
+	isMuted.subscribe((value) => {
+		muted = value;
+	});
 </script>
 
 <audio bind:paused src="../sounds/{src}" bind:muted />

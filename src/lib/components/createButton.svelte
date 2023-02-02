@@ -1,19 +1,17 @@
 <script>
 	/**
-	 * @type {any}
-	 */
-	export let chaos;
-	/**
-	 * @type {string}
+	 * @type {String | Number | null | undefined}
 	 */
 	export let title = '';
 	/**
 	 * @type {String | Number | null | undefined}
 	 */
 	export let opacity = 1;
+
+	export let enableShuffler;
 </script>
 
-<div class="plus--button" on:click={chaos} style:opacity>
+<div class="plus--button" style:opacity>
 	<svg
 		width="44px"
 		height="44px"
@@ -50,6 +48,7 @@
 		justify-content: center;
 		background: var(--black-color);
 		cursor: pointer;
+		color: white;
 	}
 	svg {
 		margin-right: 32px;

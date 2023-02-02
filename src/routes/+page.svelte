@@ -1,5 +1,5 @@
 <script>
-	import CreateButton from '$lib/components/createButton.svelte';
+	import CreateButton from '$lib/components/CreateButton.svelte';
 </script>
 
 <div class="shuffle_container">

@@ -1,6 +1,6 @@
 <script>
 	import { currentPlatform, currentAudience, currentChaos } from '$lib/shared/stores.js';
-	import Shuffler from '$lib/components/Shuffler.svelte';
+	import { getStores, navigating, page, updated } from '$app/stores';
 	import Filler from '$lib/components/Filler.svelte';
 	import PlusButton from '$lib/components/PlusButton.svelte';
 	import Button from '$lib/components/Button.svelte';
@@ -8,26 +8,30 @@
 	import Modal from '$lib/components/Modal.svelte';
 	import Static from '$lib/components/Static.svelte';
 	import CopyLinkButton from '$lib/components/CopyLinkButton.svelte';
-	import { page } from '$app/stores';
 	import slugify from 'slugify';
 	import { beforeUpdate } from 'svelte';
-
-	import challenges from '$lib/shared/challenges';
+	import ShufflerModule from '$lib/components/ShufflerModule.svelte';
 
 	/**
 	 * @type {{ json: { platforms: any; audiences: any; chaosModifiers: any; }; }}
 	 */
 	export let data;
 
+	let isHidden = true;
 	let showModal = false;
 	let chaos = false;
 	let filler = true;
 	let context = $page.params.field;
-	let paused = false;
+	let paused = true;
 
 	const enableChaos = () => {
 		chaos = true;
-		paused = true;
+		paused = false;
+	};
+
+	const enableShuffler = () => {
+		paused = false;
+		isHidden = false;
 	};
 
 	beforeUpdate(() => {
@@ -66,20 +70,7 @@
 </script>
 
 <div class="shuffle_container">
-	<Filler title="Create a" {filler} />
-	<Shuffler items={data.json.platforms} color="green" {filler} />
-	{#if context === 'design' || context === 'motion'}
-		<Filler title="For" />
-	{/if}
-	<Shuffler items={data.json.audiences} color="purple" />
-	{#if chaos === true}
-		<div transition:fade>
-			{#if context === 'audio'}
-				<Filler title="For" />
-			{/if}
-			<Shuffler items={data.json.chaosModifiers} color="yellow" />
-		</div>
-	{/if}
+	<ShufflerModule {filler} {context} {data} {isHidden} {chaos} {enableShuffler} {paused} />
 </div>
 
 {#if showModal}
@@ -106,13 +97,16 @@
 {/if}
 
 <footer>
-	{#if chaos === false}
-		<PlusButton chaos={enableChaos} title="Add chaos" opacity={1} />
-	{:else}
-		<PlusButton chaos={enableChaos} title="Add chaos" opacity={0} />
-	{/if}
-
-	<Button title="Let's go!" {share} />
+	<div transition:fade>
+		{#if chaos === false && isHidden === false}
+			<PlusButton {enableChaos} title="Add chaos" />
+		{/if}
+	</div>
+	<div>
+		{#if isHidden === false}
+			<Button title="Let's go!" {share} />
+		{/if}
+	</div>
 </footer>
 
 <style>

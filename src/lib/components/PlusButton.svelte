@@ -2,18 +2,14 @@
 	/**
 	 * @type {any}
 	 */
-	export let chaos;
+	export let enableChaos;
 	/**
 	 * @type {string}
 	 */
 	export let title;
-	/**
-	 * @type {String | Number | null | undefined}
-	 */
-	export let opacity;
 </script>
 
-<div class="plus--button" on:click={chaos} style:opacity>
+<div class="plus--button" on:click={enableChaos}>
 	<svg
 		width="44px"
 		height="44px"

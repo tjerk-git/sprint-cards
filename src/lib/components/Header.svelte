@@ -116,7 +116,7 @@
 		<!-- @todo menu item component -->
 		<ul class="menu">
 			<li>
-				<a href="/shuffle/design"
+				<a href="/shuffle/design" target="_self"
 					>UX/UI {#if $page.url.pathname === '/shuffle/design'}
 						&#8226;
 					{/if}</a
@@ -124,7 +124,7 @@
 			</li>
 
 			<li>
-				<a href="/shuffle/audio"
+				<a href="/shuffle/audio" target="_self"
 					>Audio
 					{#if $page.url.pathname === '/shuffle/audio'}
 						&#8226;
@@ -133,7 +133,7 @@
 			</li>
 
 			<li>
-				<a href="/shuffle/motion"
+				<a href="/shuffle/motion" target="_self"
 					>Motion
 					{#if $page.url.pathname === '/shuffle/motion'}
 						&#8226;
