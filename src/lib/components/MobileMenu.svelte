@@ -137,7 +137,7 @@
 				</g>
 			</svg>
 		</a>
-
+		<div class="mobile--mute"><Mute /></div>
 		<div on:click={handleMobileIconClick} class={`mobile-icon${showMobileMenu ? ' active' : ''}`}>
 			<div class="middle-line" />
 		</div>
@@ -161,6 +161,10 @@
 		margin-right: 35px;
 	}
 
+	.mobile--mute {
+		margin-left: auto;
+		padding-right: 35px;
+	}
 	nav {
 		height: 45px;
 		min-height: 105px;

@@ -6,7 +6,14 @@
 	import Audio from '$lib/components//Audio.svelte';
 	import { tokens } from '$lib/shared/stores.js';
 	import Tokens from './Tokens.svelte';
+	import { beforeNavigate } from '$app/navigation';
+
 	let src = 'no-coin.mp3';
+
+	beforeNavigate(({ from, to }) => {
+		isHidden = true;
+		countValue = 3;
+	});
 
 	export let filler;
 	export let data;
@@ -71,6 +78,5 @@
 		width: 100%;
 		display: flex;
 		justify-content: flex-end;
-		padding-right: 115px;
 	}
 </style>
