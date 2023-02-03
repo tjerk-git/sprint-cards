@@ -1,10 +1,10 @@
 <script>
-	import CreateButton from '$lib/components/CreateButton.svelte';
+	import StartButton from '$lib/components/StartButton.svelte';
 </script>
 
 <div class="shuffle_container">
 	<h1>Hey there stranger, this website generates random creative challenges</h1>
-	<a href="/shuffle/design"><CreateButton title="Create your own!" /></a>
+	<a href="/shuffle/design"><StartButton title="Create your own!" /></a>
 </div>
 
 <style>

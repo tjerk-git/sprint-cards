@@ -1,10 +1,9 @@
 <script>
-	import CreateButton from '$lib/components/CreateButton.svelte';
 	import { page } from '$app/stores';
 	import Filler from '$lib/components/Filler.svelte';
 	import Static from '$lib/components/Static.svelte';
 	import Error from '$lib/components/Error.svelte';
-	import PlusButton from '$lib/components/PlusButton.svelte';
+	import StartButton from '$lib/components/StartButton.svelte';
 
 	const { slug } = $page.params;
 
@@ -41,7 +40,7 @@
 
 <footer>
 	<div class="spacer" />
-	<a href="/shuffle/{$page.params.field}"><CreateButton title="Create your own!" /></a>
+	<a href="/shuffle/{$page.params.field}"><StartButton title="Create your own!" /></a>
 </footer>
 
 <style>

@@ -1,6 +1,6 @@
 <script>
 	import Shuffler from '$lib/components/Shuffler.svelte';
-	import CreateButton from '$lib/components/CreateButton.svelte';
+	import StartButton from '$lib/components/StartButton.svelte';
 	import Filler from '$lib/components/Filler.svelte';
 	import { fade } from 'svelte/transition';
 	import Audio from '$lib/components//Audio.svelte';
@@ -31,7 +31,7 @@
 	{/if}
 {:else}
 	<div on:click={enableShuffler}>
-		<CreateButton title="Create your own!" {enableShuffler} />
+		<StartButton title="Create your own!" {enableShuffler} />
 	</div>
 {/if}
 
