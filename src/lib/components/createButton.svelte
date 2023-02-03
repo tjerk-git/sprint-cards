@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/**
 	 * @type {String | Number | null | undefined}
 	 */
@@ -8,7 +8,7 @@
 	 */
 	export let opacity = 1;
 
-	export let enableShuffler;
+	export const enableShuffler: any = () => {};
 </script>
 
 <div class="plus--button" style:opacity>

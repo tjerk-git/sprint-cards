@@ -1,15 +1,17 @@
 <div class="shuffle_container">
 	<h1>
-		We made this for fun, with <a href="https://kit.svelte.dev/">Sveltekit </a>
+		We made this for fun, with <a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer"
+			>Sveltekit
+		</a>
 	</h1>
 
 	<h1>
 		Checkout the source
-		<a href="https://github.com/tjerk-git/sprint-cards" target="_blank">code</a>
+		<a href="https://github.com/tjerk-git/sprint-cards" target="_blank" rel="noreferrer">code</a>
 	</h1>
 
 	<h1>
-		Buy us a coffee <a href="https://ko-fi.com/U7U3BUZAM" target="_blank">here!</a>
+		Buy us a coffee <a href="https://ko-fi.com/U7U3BUZAM" target="_blank" rel="noreferrer">here!</a>
 	</h1>
 </div>
 
