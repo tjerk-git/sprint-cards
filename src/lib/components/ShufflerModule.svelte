@@ -1,9 +1,9 @@
 <script>
-	import Shuffler from './Shuffler.svelte';
-	import CreateButton from './CreateButton.svelte';
-	import Filler from './Filler.svelte';
+	import Shuffler from '$lib/components/Shuffler.svelte';
+	import CreateButton from '$lib/components/CreateButton.svelte';
+	import Filler from '$lib/components/Filler.svelte';
 	import { fade } from 'svelte/transition';
-	import Audio from './Audio.svelte';
+	import Audio from '$lib/components//Audio.svelte';
 
 	export let filler;
 	export let data;

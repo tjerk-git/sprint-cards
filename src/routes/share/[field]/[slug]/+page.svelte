@@ -1,5 +1,5 @@
 <script>
-	import CreateButton from '$lib/components/createButton.svelte';
+	import CreateButton from '$lib/components/CreateButton.svelte';
 	import { page } from '$app/stores';
 	import Filler from '$lib/components/Filler.svelte';
 	import Static from '$lib/components/Static.svelte';
