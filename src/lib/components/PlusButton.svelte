@@ -7,6 +7,8 @@
 	 * @type {string}
 	 */
 	export let title;
+
+	export let paused;
 </script>
 
 <div class="plus--button" on:click={enableChaos}>

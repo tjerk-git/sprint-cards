@@ -42,6 +42,9 @@
 		showModal = true;
 	};
 
+	/**
+	 * @param {string | undefined} text
+	 */
 	function copyToClipboard(text) {
 		window.prompt('Copy to clipboard: Ctrl+C, Enter', text);
 	}
@@ -99,7 +102,7 @@
 <footer>
 	<div transition:fade>
 		{#if chaos === false && isHidden === false}
-			<PlusButton {enableChaos} title="Add chaos" />
+			<PlusButton {enableChaos} {paused} title="Add chaos" />
 		{/if}
 	</div>
 	<div>

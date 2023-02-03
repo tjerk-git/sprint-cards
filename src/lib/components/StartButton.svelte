@@ -8,7 +8,7 @@
 	 */
 	export let opacity = 1;
 
-	export const enableShuffler: any = () => {};
+	export let enableShuffler;
 </script>
 
 <div class="plus--button" style:opacity>

@@ -13,6 +13,12 @@
 	<h1>
 		Buy us a coffee <a href="https://ko-fi.com/U7U3BUZAM" target="_blank" rel="noreferrer">here!</a>
 	</h1>
+
+	<h1>
+		We use this at our design school, <a href="https://www.linkedin.com/company/cmdlwd/mycompany/"
+			>CMD Leeuwarden</a
+		>
+	</h1>
 </div>
 
 <style>

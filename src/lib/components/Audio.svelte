@@ -5,9 +5,12 @@
 	 * @type {boolean}
 	 */
 	export let paused;
+	/**
+	 * @type {string}
+	 */
+	export let src;
 
 	let muted = false;
-	let src = 'bloep.mov';
 
 	isMuted.subscribe((value) => {
 		muted = value;

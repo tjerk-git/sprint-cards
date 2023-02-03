@@ -10,6 +10,7 @@
 	export let color: string;
 	export let items: any;
 	export let filler: boolean = false;
+	let src = 'bloeper.mp3';
 
 	let paused = true;
 
@@ -56,15 +57,19 @@
 	const spin = () => {
 		if (countValue !== 0) {
 			selectedItem = Math.floor(Math.random() * items.length);
-			decrementToken();
+
 			updateTitles();
 			paused = false;
+
+			setTimeout(() => {
+				decrementToken();
+			}, 4341);
 		}
 	};
 </script>
 
 <div class="shuffler {color}">
-	<Typewriter mode="scramble" cursor:false wordInterval: 1>
+	<Typewriter mode="scramble" cursor:false>
 		{items[selectedItem].title}
 	</Typewriter>
 
@@ -75,7 +80,7 @@
 	<div class="filler_container" />
 {/if}
 
-<Audio {paused} />
+<Audio {paused} {src} />
 
 <style>
 	.purple {

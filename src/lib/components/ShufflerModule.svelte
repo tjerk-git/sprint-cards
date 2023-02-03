@@ -1,9 +1,12 @@
-<script>
+<script lang="ts">
 	import Shuffler from '$lib/components/Shuffler.svelte';
 	import StartButton from '$lib/components/StartButton.svelte';
 	import Filler from '$lib/components/Filler.svelte';
 	import { fade } from 'svelte/transition';
 	import Audio from '$lib/components//Audio.svelte';
+	import { tokens } from '$lib/shared/stores.js';
+	import Tokens from './Tokens.svelte';
+	let src = 'no-coin.mp3';
 
 	export let filler;
 	export let data;
@@ -12,9 +15,21 @@
 	export let chaos;
 	export let enableShuffler;
 	export let paused;
+
+	/**
+	 * @type {number}
+	 */
+	let countValue: number;
+
+	tokens.subscribe((value) => {
+		countValue = value;
+	});
 </script>
 
 {#if !isHidden}
+	<div class="token--container">
+		<Tokens tokens={countValue} />
+	</div>
 	<Filler title="Create a" {filler} />
 	<Shuffler items={data.json.platforms} color="green" {filler} />
 	{#if context === 'design' || context === 'motion'}
@@ -31,8 +46,31 @@
 	{/if}
 {:else}
 	<div on:click={enableShuffler}>
+		<h1>Hey there stranger, this website generates random {context} challenges.</h1>
 		<StartButton title="Create your own!" {enableShuffler} />
 	</div>
 {/if}
 
-<Audio {paused} />
+<Audio {paused} {src} />
+
+<style>
+	h1 {
+		font-size: 3.2em;
+		margin-bottom: 75px;
+	}
+
+	@media only screen and (max-width: 600px) {
+		h1 {
+			font-size: 1.8em;
+		}
+	}
+
+	.token--container {
+		padding: 1rem;
+		margin-left: auto;
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		padding-right: 115px;
+	}
+</style>
