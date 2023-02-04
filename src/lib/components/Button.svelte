@@ -1,9 +1,12 @@
-<script>
+<script lang="ts">
 	/**
 	 * @type {string}
 	 */
-	export let title;
-	export let share;
+	export let title: string;
+	/**
+	 * @type {any}
+	 */
+	export let share: any;
 </script>
 
 <button class="go--button" on:click={share}>

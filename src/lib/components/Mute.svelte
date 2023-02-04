@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import { isMuted } from '$lib/shared/stores.js';
-	let muted = false;
+	let muted: boolean = false;
 
 	// subscribe to the store
 	isMuted.subscribe((value) => {

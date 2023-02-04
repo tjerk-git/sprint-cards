@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import { fade } from 'svelte/transition';
 	/**
 	 * @type {Number}
 	 */
-	export let tokens;
+	export let tokens: number;
 </script>
 
 <div class="circle">

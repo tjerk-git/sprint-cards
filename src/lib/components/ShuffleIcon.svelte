@@ -1,14 +1,14 @@
-<script>
+<script lang="ts">
 	import { fly } from 'svelte/transition';
 	/**
 	 * @type {any}
 	 */
-	export let spin;
+	export let spin: any;
 
 	/**
 	 * @type {boolean}
 	 */
-	export let hideShuffler;
+	export let hideShuffler: boolean;
 </script>
 
 {#if !hideShuffler}

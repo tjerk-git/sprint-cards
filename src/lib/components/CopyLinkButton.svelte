@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	/**
 	 * @type {string}
 	 */
-	export let title;
-	export let copyLink;
+	export let title: string;
+	export let copyLink: any;
 </script>
 
 <button class="go--button" on:click={copyLink}>

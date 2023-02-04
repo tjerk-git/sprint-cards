@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
 	/**
 	 * @type {string}
 	 */
-	export let title;
+	export let title: string;
 	/**
 	 * @type {boolean}
 	 */
-	export let filler = false;
+	export let filler: boolean = false;
 </script>
 
 <div class="filler">{title}</div>

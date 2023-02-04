@@ -6,9 +6,9 @@
 	/**
 	 * @type {String | Number | null | undefined}
 	 */
-	export let opacity = 1;
+	export let opacity: number = 1;
 
-	export let enableShuffler;
+	export let enableShuffler: boolean;
 </script>
 
 <div class="plus--button" style:opacity>

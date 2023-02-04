@@ -15,13 +15,13 @@
 		countValue = 3;
 	});
 
-	export let filler;
-	export let data;
-	export let isHidden;
-	export let context;
-	export let chaos;
-	export let enableShuffler;
-	export let paused;
+	export let filler: boolean;
+	export let data: any;
+	export let isHidden: boolean;
+	export let context: string;
+	export let chaos: boolean;
+	export let enableShuffler: boolean;
+	export let paused: boolean;
 
 	/**
 	 * @type {number}

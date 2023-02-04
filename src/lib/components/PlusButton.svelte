@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/**
 	 * @type {any}
 	 */
@@ -7,8 +7,10 @@
 	 * @type {string}
 	 */
 	export let title;
-
-	export let paused;
+	/**
+	 * @type {boolean}
+	 */
+	export let paused: boolean;
 </script>
 
 <div class="plus--button" on:click={enableChaos}>

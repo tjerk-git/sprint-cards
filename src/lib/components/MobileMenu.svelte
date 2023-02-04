@@ -1,11 +1,10 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import Mute from './Mute.svelte';
 
 	// Show mobile icon and display menu
-	let showMobileMenu = false;
-	let active = '';
+	let showMobileMenu: boolean = false;
 
 	// List of navigation items
 	const navItems = [
@@ -37,8 +36,8 @@
 	onMount(() => {
 		const mediaListener = window.matchMedia('(max-width: 767px)');
 
-		mediaListener.addEventListener('change', () => {
-			mediaQueryHandler();
+		mediaListener.addEventListener('change', (e) => {
+			mediaQueryHandler(e);
 		});
 	});
 </script>

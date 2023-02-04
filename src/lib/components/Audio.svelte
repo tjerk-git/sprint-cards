@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { isMuted } from '$lib/shared/stores.js';
 
 	/**
@@ -10,7 +10,7 @@
 	 */
 	export let src;
 
-	let muted = false;
+	let muted: boolean = false;
 
 	isMuted.subscribe((value) => {
 		muted = value;
