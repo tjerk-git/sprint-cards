@@ -313,5 +313,9 @@
 		.navbar-list a {
 			display: inline-flex;
 		}
+
+		.mobile--mute {
+			display: none;
+		}
 	}
 </style>
