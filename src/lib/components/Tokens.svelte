@@ -15,8 +15,8 @@
 <style>
 	.circle {
 		border: 3px solid black;
-		width: 50px;
-		height: 50px;
+		width: 64px;
+		height: 64px;
 		border-radius: 100%;
 		display: flex;
 		align-items: center;

@@ -11,12 +11,6 @@
 	import slugify from 'slugify';
 	import { beforeUpdate } from 'svelte';
 	import ShufflerModule from '$lib/components/ShufflerModule.svelte';
-	import { beforeNavigate } from '$app/navigation';
-
-	beforeNavigate(({ from, to }) => {
-		isHidden = true;
-		paused = true;
-	});
 
 	/**
 	 * @type {{ json: { platforms: any; audiences: any; chaosModifiers: any; }; }}

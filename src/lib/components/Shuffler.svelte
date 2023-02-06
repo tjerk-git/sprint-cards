@@ -16,10 +16,16 @@
 
 	onMount(() => {
 		updateTitles();
+
+		tokens.subscribe((value) => {
+			countValue = value;
+		});
 	});
 
 	function decrementToken() {
-		tokens.update((n) => n - 1);
+		if (countValue !== 0) {
+			tokens.update((n) => n - 1);
+		}
 	}
 
 	function updateTitles() {
@@ -45,12 +51,10 @@
 	$: {
 		if (countValue === 0) {
 			hideShuffler = true;
+		} else {
+			hideShuffler = false;
 		}
 	}
-
-	tokens.subscribe((value) => {
-		countValue = value;
-	});
 
 	selectedItem = Math.floor(Math.random() * items.length);
 
