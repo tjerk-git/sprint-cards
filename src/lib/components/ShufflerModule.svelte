@@ -31,7 +31,7 @@
 	<div class="token--container">
 		<Tokens tokens={countValue} />
 	</div>
-	<Filler title="Create a" {filler} />
+	<Filler title="Create" {filler} />
 	<Shuffler items={data.json.platforms} color="green" {filler} />
 	{#if context === 'design' || context === 'motion'}
 		<Filler title="For" />
