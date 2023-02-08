@@ -159,7 +159,7 @@ export const GET = async () => {
             {
                 "id": 16,
                 "title": 'A recipe website',
-                "slug": "a-recipe-website",
+                "slug": "A-recipe-website",
             },
 
         ],
