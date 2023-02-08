@@ -66,8 +66,8 @@ export const GET = async () => {
             },
             {
                 "id": 13,
-                "title": 'For your best friend',
-                "slug": 'For-your-best-friend'
+                "title": 'Your best friend',
+                "slug": 'Your-best-friend'
             },
             {
                 "id": 14,
@@ -76,8 +76,8 @@ export const GET = async () => {
             },
             {
                 "id": 15,
-                "title": 'For people with low digital skills',
-                "slug": 'For-people-with-low-digital-skills'
+                "title": 'People with low digital skills',
+                "slug": 'People-with-low-digital-skills'
             }
         ],
         "platforms": [
