@@ -6,7 +6,6 @@
 	import Audio from '$lib/components//Audio.svelte';
 	import { tokens } from '$lib/shared/stores.js';
 	import Tokens from './Tokens.svelte';
-	import Refresh from './Refresh.svelte';
 
 	let src = 'no-coin.mp3';
 
@@ -26,16 +25,10 @@
 	tokens.subscribe((value) => {
 		countValue = value;
 	});
-
-	const refresh = () => {
-		tokens.update((n) => (n = 3));
-		paused = false;
-	};
 </script>
 
 {#if !isHidden}
 	<div class="token--container">
-		<Refresh {refresh} />
 		<Tokens tokens={countValue} />
 	</div>
 	<Filler title="Create a" {filler} />
