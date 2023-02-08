@@ -153,9 +153,15 @@ export const GET = async () => {
             },
             {
                 "id": 15,
-                "title": 'An ebook reader interface',
-                "slug": "An-ebook-reader-interface",
-            }
+                "title": 'An ebook reader',
+                "slug": "An-ebook-reader",
+            },
+            {
+                "id": 16,
+                "title": 'A recipe website',
+                "slug": "a-recipe-website",
+            },
+
         ],
         "chaosModifiers": [
             {
@@ -245,6 +251,6 @@ export const GET = async () => {
             }
         ],
     };
- 
+
     return json(design)
 }
