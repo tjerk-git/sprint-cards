@@ -38,7 +38,7 @@
 	{/if}
 	<Shuffler items={data.json.audiences} color="purple" />
 	{#if chaos === true}
-		<div transition:fade>
+		<div transition:fade class="chaos">
 			{#if context === 'audio'}
 				<Filler title="For" />
 			{/if}
@@ -63,6 +63,9 @@
 	@media only screen and (max-width: 600px) {
 		h1 {
 			font-size: 1.8em;
+		}
+		.chaos {
+			width: 100%;
 		}
 	}
 
