@@ -60,7 +60,10 @@
 
 	const spin = () => {
 		if (countValue !== 0) {
-			selectedItem = Math.floor(Math.random() * items.length);
+			// Don't want the same item twice
+			if (selectedItem !== Math.floor(Math.random() * items.length)) {
+				selectedItem = Math.floor(Math.random() * items.length);
+			}
 
 			updateTitles();
 			paused = false;
