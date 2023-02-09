@@ -6,18 +6,18 @@ export const GET = async () => {
         "audiences": [
             {
                 "id": 1,
-                "title": 'Cats',
-                "slug": 'Cats',
+                "title": 'People with terrible internet speed',
+                "slug": 'People-with-terrible-internet-speed',
             },
             {
                 "id": 2,
-                "title": 'Someone with one arm available',
-                "slug": 'Someone-with-one-arm-available',
+                "title": 'Metalheads',
+                "slug": 'Metalheads',
             },
             {
                 "id": 3,
-                "title": 'The oldest person you know',
-                "slug": 'The-oldest-person-you-know',
+                "title": 'Someone with one arm',
+                "slug": 'Someone-with-one-arm',
             },
             {
                 "id": 4,
@@ -71,13 +71,18 @@ export const GET = async () => {
             },
             {
                 "id": 14,
-                "title": 'Families',
-                "slug": 'Families'
+                "title": 'Big families',
+                "slug": 'Big-families'
             },
             {
                 "id": 15,
                 "title": 'People with low digital skills',
                 "slug": 'People-with-low-digital-skills'
+            },
+            {
+                "id": 16,
+                "title": 'Teenage Goths',
+                "slug": 'Teenage-Goths'
             }
         ],
         "platforms": [
@@ -128,8 +133,8 @@ export const GET = async () => {
             },
             {
                 "id": 10,
-                "title": 'A job marketplace',
-                "slug": "A-job-marketplace",
+			    "title": 'A recipe website',
+                "slug": "A-recipe-website",
             },
             {
                 "id": 11,
@@ -148,20 +153,14 @@ export const GET = async () => {
             },
             {
                 "id": 14,
-                "title": 'A photo sharing app',
-                "slug": "A-photo-sharing-app",
+			          "title": 'A digital game',
+                "slug": "A-digital-game",
             },
             {
                 "id": 15,
                 "title": 'An ebook reader',
                 "slug": "An-ebook-reader",
-            },
-            {
-                "id": 16,
-                "title": 'A recipe website',
-                "slug": "A-recipe-website",
-            },
-
+            }
         ],
         "chaosModifiers": [
             {
