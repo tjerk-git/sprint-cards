@@ -145,6 +145,7 @@
 				<li>
 					<a
 						on:click={closeMenu}
+						data-sveltekit-preload-data="hover"
 						class={$page.url.pathname === item.href ? 'active' : ''}
 						href={item.href}>{item.label}</a
 					>
