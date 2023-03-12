@@ -151,14 +151,20 @@
 					>
 				</li>
 			{/each}
-			<li><Mute /></li>
 		</ul>
+		<div class="mute">
+			<Mute />
+		</div>
 	</div>
 </nav>
 
 <style>
 	svg {
 		margin-right: 35px;
+	}
+
+	.mute {
+		float: right;
 	}
 
 	.mobile--mute {
@@ -175,7 +181,6 @@
 	}
 
 	.inner {
-		max-width: 980px;
 		box-sizing: border-box;
 		display: flex;
 		align-items: center;
@@ -267,6 +272,7 @@
 	}
 
 	.navbar-list li {
+		float: left;
 		list-style-type: none;
 		position: relative;
 	}
@@ -306,7 +312,7 @@
 		}
 
 		.navbar-list {
-			display: flex;
+			display: block;
 			padding: 0;
 			align-items: center;
 		}

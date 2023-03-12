@@ -115,7 +115,6 @@
 <style>
 	.shuffle_container {
 		min-width: 45%;
-		align-items: baseline;
 		align-content: stretch;
 		flex-wrap: wrap;
 		flex-direction: row;
