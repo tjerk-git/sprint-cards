@@ -152,9 +152,6 @@
 				</li>
 			{/each}
 		</ul>
-		<div class="mute">
-			<Mute />
-		</div>
 	</div>
 </nav>
 
@@ -319,10 +316,6 @@
 
 		.navbar-list a {
 			display: inline-flex;
-		}
-
-		.mobile--mute {
-			display: none;
 		}
 	}
 </style>
