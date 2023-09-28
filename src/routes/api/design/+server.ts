@@ -19,9 +19,10 @@ export const GET = async () => {
             { "id": 13, "title": "Language Learning App", "slug": "language-learning-app" },
             { "id": 14, "title": "Digital Game", "slug": "digital-game" },
             { "id": 15, "title": "Ebook Reader", "slug": "ebook-reader" },
-            { "id": 16, "title": "People with Terrible Internet Speed", "slug": "people-with-terrible-internet-speed" },
+
         ],
         "audiences": [
+            { "id": 16, "title": "People with Terrible Internet Speed", "slug": "people-with-terrible-internet-speed" },
             { "id": 17, "title": "Metalheads", "slug": "metalheads" },
             { "id": 18, "title": "Someone with One Arm", "slug": "someone-with-one-arm" },
             { "id": 19, "title": "The Oldest Person You Know", "slug": "the-oldest-person-you-know" },

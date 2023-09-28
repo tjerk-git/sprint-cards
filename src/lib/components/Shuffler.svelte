@@ -3,13 +3,12 @@
 	import ShuffleIcon from './ShuffleIcon.svelte';
 	import { onMount } from 'svelte';
 
-	import {
-		tokens,
-		currentAudience,
-		currentChaos,
-		currentPlatform,
-		currentSrc
-	} from '$lib/shared/stores.js';
+	import { Sound } from 'svelte-sound';
+	import no_coin_mp3 from '$lib/sounds/no-coin.mp3';
+	import bloeper_mp3 from '$lib/sounds/bloeper.mp3';
+	const bloeper = new Sound(bloeper_mp3);
+
+	import { tokens, currentAudience, currentChaos, currentPlatform } from '$lib/shared/stores.js';
 
 	// prop
 	export let color: string;
@@ -69,7 +68,7 @@
 
 			updateTitles();
 
-			currentSrc.update((n) => (n = 'bloeper.mp3'));
+			bloeper.play();
 
 			setTimeout(() => {
 				decrementToken();
