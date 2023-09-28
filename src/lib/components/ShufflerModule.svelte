@@ -3,11 +3,8 @@
 	import StartButton from '$lib/components/StartButton.svelte';
 	import Filler from '$lib/components/Filler.svelte';
 	import { fade } from 'svelte/transition';
-	import Audio from '$lib/components//Audio.svelte';
 	import { tokens } from '$lib/shared/stores.js';
 	import Tokens from './Tokens.svelte';
-
-	let src = 'no-coin.mp3';
 
 	export let filler: boolean;
 	export let data: any;
@@ -15,7 +12,6 @@
 	export let context: string;
 	export let chaos: boolean;
 	export let enableShuffler: boolean;
-	export let paused: boolean;
 
 	/**
 	 * @type {number}
@@ -51,8 +47,6 @@
 		<StartButton title="Create your own!" {enableShuffler} />
 	</div>
 {/if}
-
-<Audio {paused} {src} />
 
 <style>
 	h1 {

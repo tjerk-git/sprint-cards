@@ -2,17 +2,19 @@
 	import Typewriter from 'svelte-typewriter';
 	import ShuffleIcon from './ShuffleIcon.svelte';
 	import { onMount } from 'svelte';
-	import Audio from './Audio.svelte';
 
-	import { tokens, currentAudience, currentChaos, currentPlatform } from '$lib/shared/stores.js';
+	import {
+		tokens,
+		currentAudience,
+		currentChaos,
+		currentPlatform,
+		currentSrc
+	} from '$lib/shared/stores.js';
 
 	// prop
 	export let color: string;
 	export let items: any;
 	export let filler: boolean = false;
-	let src = 'bloeper.mp3';
-
-	let paused = true;
 
 	onMount(() => {
 		updateTitles();
@@ -66,7 +68,8 @@
 			}
 
 			updateTitles();
-			paused = false;
+
+			currentSrc.update((n) => (n = 'bloeper.mp3'));
 
 			setTimeout(() => {
 				decrementToken();
@@ -86,8 +89,6 @@
 {#if filler}
 	<div class="filler_container" />
 {/if}
-
-<Audio {paused} {src} />
 
 <style>
 	.purple {

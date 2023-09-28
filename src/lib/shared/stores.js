@@ -6,3 +6,4 @@ export const currentPlatform = writable("");
 export const currentAudience = writable("");
 export const currentChaos = writable("");
 export const isMuted = writable(false);
+export const currentSrc = writable("");

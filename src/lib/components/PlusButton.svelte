@@ -7,10 +7,6 @@
 	 * @type {string}
 	 */
 	export let title;
-	/**
-	 * @type {boolean}
-	 */
-	export let paused: boolean;
 </script>
 
 <div class="plus--button" on:click={enableChaos}>

@@ -30,6 +30,7 @@
 	"type": "module",
 	"dependencies": {
 		"slugify": "^1.6.5",
+		"svelte-sound": "^0.6.0",
 		"svelte-typewriter": "^3.1.4"
 	}
 }

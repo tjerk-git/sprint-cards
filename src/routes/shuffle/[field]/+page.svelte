@@ -1,5 +1,10 @@
 <script>
-	import { currentPlatform, currentAudience, currentChaos } from '$lib/shared/stores.js';
+	import {
+		currentPlatform,
+		currentAudience,
+		currentChaos,
+		currentSrc
+	} from '$lib/shared/stores.js';
 	import { getStores, navigating, page, updated } from '$app/stores';
 	import Filler from '$lib/components/Filler.svelte';
 	import PlusButton from '$lib/components/PlusButton.svelte';
@@ -11,6 +16,7 @@
 	import slugify from 'slugify';
 	import { beforeUpdate } from 'svelte';
 	import ShufflerModule from '$lib/components/ShufflerModule.svelte';
+	import Audio from '$lib/components/Audio.svelte';
 
 	/**
 	 * @type {{ json: { platforms: any; audiences: any; chaosModifiers: any; }; }}
@@ -22,16 +28,15 @@
 	let chaos = false;
 	let filler = true;
 	let context = $page.params.field;
-	let paused = true;
 
 	const enableChaos = () => {
 		chaos = true;
-		paused = false;
+		currentSrc.update((n) => (n = 'no-coin.mp3'));
 	};
 
 	const enableShuffler = () => {
-		paused = false;
 		isHidden = false;
+		currentSrc.update((n) => (n = 'no-coin.mp3'));
 	};
 
 	beforeUpdate(() => {
@@ -73,8 +78,10 @@
 </script>
 
 <div class="shuffle_container">
-	<ShufflerModule {filler} {context} {data} {isHidden} {chaos} {enableShuffler} {paused} />
+	<ShufflerModule {filler} {context} {data} {isHidden} {chaos} {enableShuffler} />
 </div>
+
+<Audio />
 
 {#if showModal}
 	<div transition:fade>
@@ -102,7 +109,7 @@
 <footer>
 	<div transition:fade>
 		{#if chaos === false && isHidden === false}
-			<PlusButton {enableChaos} {paused} title="Add chaos" />
+			<PlusButton {enableChaos} title="Add chaos" />
 		{/if}
 	</div>
 	<div>
