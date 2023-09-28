@@ -2,240 +2,63 @@ import { json } from '@sveltejs/kit'
 
 export const GET = async () => {
 
-    const design = {
+    const audio = {
         "platforms": [
-            {
-                "id": 1,
-                "title": 'Hip-hop',
-                "slug": 'Hip-hop',
-            },
-            {
-                "id": 2,
-                "title": 'Blues',
-                "slug": 'Blues',
-            },
-            {
-                "id": 3,
-                "title": 'Pop',
-                "slug": 'Pop',
-            }
-            ,
-            {
-                "id": 4,
-                "title": 'Country',
-                "slug": 'Country',
-            },
-            {
-                "id": 5,
-                "title": 'Rock',
-                "slug": 'Rock',
-            },
-            {
-                "id": 6,
-                "title": 'Bolero',
-                "slug": 'Bolero',
-            },
-            {
-                "id": 7,
-                "title": 'Metal',
-                "slug": 'Metal',
-            },
-            {
-                "id": 8,
-                "title": 'Jazz',
-                "slug": 'Jazz',
-            },
-            {
-                "id": 9,
-                "title": 'Reggae',
-                "slug": 'Reggae',
-            },
-            {
-                "id": 10,
-                "title": 'Dubstep',
-                "slug": 'Dubstep',
-            },
-            {
-                "id": 11,
-                "title": 'Trap',
-                "slug": 'Trap',
-            },
-            {
-                "id": 12,
-                "title": 'EDM',
-                "slug": 'EDM',
-            },
-            {
-                "id": 13,
-                "title": 'Grunge',
-                "slug": 'Grunge',
-            },
-            {
-                "id": 14,
-                "title": 'Lo-fi',
-                "slug": 'Lo-fi',
-            },
-            {
-                "id": 15,
-                "title": 'Punk',
-                "slug": 'Punk',
-            },
-            {
-                "id": 16,
-                "title": 'Reggaeton',
-                "slug": 'Reggaeton',
-            },
-            {
-                "id": 17,
-                "title": 'Lullaby',
-                "slug": 'Lullaby',
-            },
-            {
-                "id": 18,
-                "title": 'Salsa',
-                "slug": 'Salsa',
-            },
-            {
-                "id": 19,
-                "title": 'Trip hop',
-                "slug": 'Trip hop',
-            },
-            {
-                "id": 20,
-                "title": 'Jungle',
-                "slug": 'Jungle',
-            },
-            {
-                "id": 21,
-                "title": 'Funk',
-                "slug": 'Funk',
-            },            
+            { "id": 1, "title": "Hiphop", "slug": "hiphop" },
+            { "id": 2, "title": "Blues", "slug": "blues" },
+            { "id": 3, "title": "Pop", "slug": "pop" },
+            { "id": 4, "title": "Country", "slug": "country" },
+            { "id": 5, "title": "Rock", "slug": "rock" },
+            { "id": 6, "title": "Bossa Nova", "slug": "bossa-nova" },
+            { "id": 7, "title": "Metal", "slug": "metal" },
+            { "id": 8, "title": "Jazz", "slug": "jazz" },
+            { "id": 9, "title": "Reggae", "slug": "reggae" },
+            { "id": 10, "title": "Dubstep", "slug": "dubstep" },
+            { "id": 11, "title": "Trap", "slug": "trap" },
+            { "id": 12, "title": "Dance", "slug": "dance" },
+            { "id": 13, "title": "Grunge", "slug": "grunge" },
+            { "id": 14, "title": "Lo-fi", "slug": "lo-fi" },
+            { "id": 15, "title": "Reggaeton", "slug": "reggaeton" },
+            { "id": 16, "title": "Funk", "slug": "funk" },
+            { "id": 17, "title": "Salsa", "slug": "salsa" },
+            { "id": 18, "title": "Trip-hop", "slug": "trip-hop" },
+            { "id": 19, "title": "Drum & Bass", "slug": "drum-and-bass" },
+            { "id": 20, "title": "Electronic", "slug": "electronic" },
+            { "id": 21, "title": "Easy Listening", "slug": "easy-listening" },
+            { "id": 22, "title": "Soul", "slug": "soul" }
         ],
         "audiences": [
-            {
-                "id": 1,
-                "title": 'Jingle',
-                "slug": 'Jingle',
-            },
-            {
-                "id": 2,
-                "title": 'Soundtrack',
-                "slug": 'Soundtrack',
-            },
-            {
-                "id": 3,
-                "title": 'Beat',
-                "slug": 'Beat',
-            },
-            {
-                "id": 4,
-                "title": 'Podcast intro',
-                "slug": 'Podcast-intro',
-            },
-            {
-                "id": 5,
-                "title": 'Song',
-                "slug": 'Song',
-            },
-            {
-                "id": 6,
-                "title": 'Loop',
-                "slug": 'Loop',
-            },
-            {
-                "id": 7,
-                "title": 'Trippy Soundscape',
-                "slug": 'Trippy Soundscape',
-            },
-            {
-                "id": 8,
-                "title": 'Generic copyright free track',
-                "slug": 'Generic-copyright-free-track',
-            },
-            {
-                "id": 9,
-                "title": 'Anthem',
-                "slug": 'Anthem',
-            },
-            {
-                "id": 10,
-                "title": 'Motivational track',
-                "slug": 'Motivational-track',
-            },
-            {
-                "id": 11,
-                "title": 'Workout track',
-                "slug": 'Workout-track',
-            },
-            {
-                "id": 12,
-                "title": 'Meditation track',
-                "slug": 'Meditation-track',
-            },
-            {
-                "id": 13,
-                "title": 'Sports final celebration track',
-                "slug": 'Sports-final-celebration-track',
-            },
-            {
-                "id": 14,
-                "title": 'World-cup song',
-                "slug": 'World-cup-song',
-            },
-            {
-                "id": 15,
-                "title": 'Campfire song',
-                "slug": 'Campfire-song',
-            },
-            {
-                "id": 16,
-                "title": 'Mating ritual track',
-                "slug": 'Mating-ritual-track',
-            },
+            { "id": 23, "title": "Jingle", "slug": "jingle" },
+            { "id": 24, "title": "Soundtrack", "slug": "soundtrack" },
+            { "id": 25, "title": "Beat", "slug": "beat" },
+            { "id": 26, "title": "Lullaby", "slug": "lullaby" },
+            { "id": 27, "title": "Podcast intro", "slug": "podcast-intro" },
+            { "id": 28, "title": "Song", "slug": "song" },
+            { "id": 29, "title": "Loop", "slug": "loop" },
+            { "id": 30, "title": "Soundscape", "slug": "soundscape" },
+            { "id": 31, "title": "Theme song", "slug": "theme-song" },
+            { "id": 32, "title": "Motivational song", "slug": "motivational-song" },
+            { "id": 33, "title": "Workout song", "slug": "workout-song" },
+            { "id": 34, "title": "Campfire song", "slug": "campfire-song" }
         ],
         "chaosModifiers": [
-            {
-                "id": 1,
-                "title": 'For birds',
-                "slug": 'For-birds'
-            },
-            {
-                "id": 2,
-                "title": 'For aliens',
-                "slug": 'For-aliens'
-            },
-            {
-                "id": 3,
-                "title": 'Dutch people',
-                "slug": 'Dutch-people'
-            },
-            {
-                "id": 4,
-                "title": 'German people',
-                "slug": 'German-people'
-            },
-            {
-                "id": 5,
-                "title": 'Children',
-                "slug": 'Children'
-            },
-            {
-                "id": 7,
-                "title": 'Parents',
-                "slug": 'Parents'
-            },
-            {
-                "id": 8,
-                "title": 'Lawyers',
-                "slug": 'Lawyers'
-            },
-            {
-                "id": 9,
-                "title": 'Hooligans',
-                "slug": 'Hooligans'
-            },
-        ],
+            { "id": 35, "title": "Politicians", "slug": "politicians" },
+            { "id": 36, "title": "Yourself", "slug": "yourself" },
+            { "id": 37, "title": "Dads", "slug": "dads" },
+            { "id": 38, "title": "Kids", "slug": "kids" },
+            { "id": 39, "title": "Angsty teenagers", "slug": "angsty-teenagers" },
+            { "id": 40, "title": "Parents", "slug": "parents" },
+            { "id": 41, "title": "Lawyers", "slug": "lawyers" },
+            { "id": 42, "title": "Football fans", "slug": "football-fans" },
+            { "id": 43, "title": "Very busy people", "slug": "very-busy-people" },
+            { "id": 44, "title": "Your best friend", "slug": "your-best-friend" },
+            { "id": 45, "title": "70-year olds", "slug": "70-year-olds" },
+            { "id": 46, "title": "Cartoon characters", "slug": "cartoon-characters" },
+            { "id": 47, "title": "Moms", "slug": "moms" },
+            { "id": 48, "title": "Babies", "slug": "babies" },
+            { "id": 49, "title": "Robots", "slug": "robots" }
+        ]
     };
 
-    return json(design)
+    return json(audio)
 }

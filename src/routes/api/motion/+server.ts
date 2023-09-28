@@ -2,151 +2,56 @@ import { json } from '@sveltejs/kit'
 
 export const GET = async () => {
 
-    const design = {
+    const motion = {
         "platforms": [
-            {
-                "id": 1,
-                "title": '2D animation',
-                "slug": '2D-animation',
-            },
-            {
-                "id": 2,
-                "title": '3D-animation',
-                "slug": '3D-animation',
-            },
-            {
-                "id": 3,
-                "title": 'Stop-motion',
-                "slug": 'Stop-motion',
-            }
-            ,
-            {
-                "id": 4,
-                "title": 'Motion graphic animation',
-                "slug": 'Motion-graphic-animation',
-            },
-            {
-                "id": 5,
-                "title": 'Kinetic typography video',
-                "slug": 'Kinetic-typography-video',
-            },
-            {
-                "id": 6,
-                "title": 'Rotoscoped animation',
-                "slug": 'Rotoscoped-animation',
-            },
-            {
-                "id": 7,
-                "title": 'Cel animation',
-                "slug": 'Cel-animation',
-            },
-            {
-                "id": 8,
-                "title": 'Clay animation',
-                "slug": 'Clay-animation',
-            },
-            {
-                "id": 9,
-                "title": 'Cut-out animation',
-                "slug": 'Cut-out-animation',
-            },
-            {
-                "id": 10,
-                "title": 'Dubstep',
-                "slug": 'Dubstep',
-            },
-            
+            { "id": 1, "title": "2D Animation", "slug": "2d-animation" },
+            { "id": 2, "title": "3D Animation", "slug": "3d-animation" },
+            { "id": 3, "title": "Stop Motion Animation", "slug": "stop-motion-animation" },
+            { "id": 4, "title": "Motion Graphics", "slug": "motion-graphics" },
+            { "id": 5, "title": "Kinetic Typographic Animation", "slug": "kinetic-typographic-animation" },
+            { "id": 6, "title": "Rotoscoped Animation", "slug": "rotoscoped-animation" },
+            { "id": 7, "title": "Cel Animation", "slug": "cel-animation" },
+            { "id": 8, "title": "Claymation", "slug": "claymation" },
+            { "id": 9, "title": "Cutout Animation", "slug": "cutout-animation" },
+            { "id": 10, "title": "Flipbook", "slug": "flipbook" },
+            { "id": 11, "title": "Puppet Animation", "slug": "puppet-animation" },
+            { "id": 12, "title": "Morphing Animation", "slug": "morphing-animation" },
+            { "id": 13, "title": "Pixilation Animation", "slug": "pixilation-animation" },
+            { "id": 14, "title": "Object Animation", "slug": "object-animation" },
         ],
         "audiences": [
-            {
-                "id": 1,
-                "title": 'Cryptocurrency companies',
-                "slug": 'Cryptocurrency-companies',
-            },
-            {
-                "id": 2,
-                "title": 'Magic shows or illusions',
-                "slug": 'Magic-shows-or-illusions',
-            },
-            {
-                "id": 3,
-                "title": 'Museums for interactive exhibits',
-                "slug": 'Museums-for-interactive-exhibits',
-            },
-            {
-                "id": 4,
-                "title": 'Virtual reality experiences',
-                "slug": 'Virtual-reality-experiences',
-            },
-            {
-                "id": 5,
-                "title": 'Adult entertainment industry',
-                "slug": 'Adult-entertainment-industry',
-            },
-            {
-                "id": 6,
-                "title": 'Political campaigns',
-                "slug": 'Political-campaigns',
-            },
-            {
-                "id": 7,
-                "title": 'Paranormal investigation groups',
-                "slug": 'Paranormal-investigation-groups',
-            },
-            {
-                "id": 8,
-                "title": 'Religious organizations for animated gospel stories',
-                "slug": 'Religious-organizations-for-animated-gospel-stories',
-            },
-            {
-                "id": 9,
-                "title": 'Medical simulation companies',
-                "slug": 'Medical-simulation-companies',
-            },
-            {
-                "id": 10,
-                "title": 'Fortune-telling or astrology services',
-                "slug": 'Fortune-telling-or-astrology-services',
-            },
+            { "id": 15, "title": "Museum", "slug": "museum" },
+            { "id": 16, "title": "Magic Show", "slug": "magic-show" },
+            { "id": 17, "title": "VR Experience", "slug": "vr-experience" },
+            { "id": 18, "title": "Political Campaign", "slug": "political-campaign" },
+            { "id": 19, "title": "Paranormal Investigation Group", "slug": "paranormal-investigation-group" },
+            { "id": 20, "title": "Fortune Teller", "slug": "fortune-teller" },
+            { "id": 21, "title": "Educational TV Program", "slug": "educational-tv-program" },
+            { "id": 22, "title": "Nature Documentary", "slug": "nature-documentary" },
+            { "id": 23, "title": "Design Studio", "slug": "design-studio" },
+            { "id": 24, "title": "Music Festival", "slug": "music-festival" },
+            { "id": 25, "title": "Music Venue", "slug": "music-venue" },
+            { "id": 26, "title": "School", "slug": "school" },
         ],
         "chaosModifiers": [
-            {
-                "id": 1,
-                "title": 'Using only 2 or 3 colors',
-                "slug": 'Using-only-2-or-3-colors'
-            },
-            {
-                "id": 2,
-                "title": 'In isometric projection',
-                "slug": 'In-isometric-projection'
-            },
-            {
-                "id": 3,
-                "title": 'Using explosions or particle systems',
-                "slug": 'Using-explosions-or-particle-systems'
-            },
-            {
-                "id": 4,
-                "title": 'That can be understood in silence',
-                "slug": 'That-can-be-understood-in-silence'
-            },
-            {
-                "id": 5,
-                "title": 'Using only rectangles and squares',
-                "slug": 'Using-only-rectangles-and-squares'
-            },
-            {
-                "id": 7,
-                "title": 'Without the use of text (spoken and written)',
-                "slug": 'Without-the-use-of-text-(spoken-and-written)'
-            },
-            {
-                "id": 8,
-                "title": 'Using silhouettes',
-                "slug": 'Using-silhouettes'
-            },
-        ],
+            { "id": 27, "title": "Horror Series Intro", "slug": "horror-series-intro" },
+            { "id": 28, "title": "Film Festival", "slug": "film-festival" },
+            { "id": 29, "title": "Using Only 2 Colors", "slug": "using-only-2-colors" },
+            { "id": 30, "title": "In an Isometric Perspective", "slug": "in-an-isometric-perspective" },
+            { "id": 31, "title": "Using Explosions", "slug": "using-explosions" },
+            { "id": 32, "title": "Without Sound", "slug": "without-sound" },
+            { "id": 33, "title": "Using Only Rectangles", "slug": "using-only-rectangles" },
+            { "id": 34, "title": "Without Using Text", "slug": "without-using-text" },
+            { "id": 35, "title": "Using Silhouettes", "slug": "using-silhouettes" },
+            { "id": 36, "title": "For Small Children", "slug": "for-small-children" },
+            { "id": 37, "title": "For Teenage Goths", "slug": "for-teenage-goths" },
+            { "id": 38, "title": "For 70-year Olds", "slug": "for-70-year-olds" },
+            { "id": 39, "title": "For Metalheads", "slug": "for-metalheads" },
+            { "id": 40, "title": "For Very Busy People", "slug": "for-very-busy-people" },
+            { "id": 41, "title": "In the Style of De Stijl", "slug": "in-the-style-of-de-stijl" },
+            { "id": 42, "title": "With Extreme Minimalism", "slug": "with-extreme-minimalism" }
+        ]
     };
 
-    return json(design)
+    return json(motion)
 }

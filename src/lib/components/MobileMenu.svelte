@@ -11,6 +11,7 @@
 		{ label: 'UX/UI', href: '/shuffle/design' },
 		{ label: 'Audio', href: '/shuffle/audio' },
 		{ label: 'Motion', href: '/shuffle/motion' },
+		{ label: 'Branding', href: '/shuffle/branding' },
 		{ label: 'About', href: '/about' }
 	];
 
